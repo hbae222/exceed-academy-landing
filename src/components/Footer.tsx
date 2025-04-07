@@ -17,20 +17,20 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Academic Writing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Creative Writing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">College Prep</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Writing Feedback</a></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Academic Writing</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Creative Writing</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">College Prep</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Writing Feedback</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold text-white mb-4">About</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Our Teachers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Our Teachers</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Testimonials</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
           

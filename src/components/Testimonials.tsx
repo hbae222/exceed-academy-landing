@@ -8,6 +8,7 @@ interface Testimonial {
   author: string;
   role: string;
   image: string;
+  isStudent?: boolean;
 }
 
 const Testimonials: React.FC = () => {
@@ -31,10 +32,11 @@ const Testimonials: React.FC = () => {
       image: "https://randomuser.me/api/portraits/women/3.jpg"
     },
     {
-      quote: "I loved the comments I got — they made me think about what I was really trying to say. I rewrote my whole intro and it felt way stronger.",
+      quote: "I loved the comments I got - they made me think about what I was really trying to say. I rewrote my whole intro and it felt way stronger.",
       author: "Sofia D.",
       role: "9th Grade Student",
-      image: "https://randomuser.me/api/portraits/women/4.jpg"
+      image: "https://randomuser.me/api/portraits/women/15.jpg",
+      isStudent: true
     },
     {
       quote: "We homeschool and have tried multiple writing programs. Nothing clicked until we found Exceed. Their editors really 'get' how to teach through feedback.",
@@ -46,10 +48,11 @@ const Testimonials: React.FC = () => {
       quote: "The turn-around is quick, and the advice is gold. I actually learned more from one round of feedback than I do in some of my English classes.",
       author: "Jayden L.",
       role: "11th Grade Student",
-      image: "https://randomuser.me/api/portraits/men/6.jpg"
+      image: "https://randomuser.me/api/portraits/men/6.jpg",
+      isStudent: true
     },
     {
-      quote: "As a working parent, I love that we can submit essays on our schedule and get meaningful help — no scheduling stress.",
+      quote: "As a working parent, I love that we can submit essays on our schedule and get meaningful help - no scheduling stress.",
       author: "Rebecca C.",
       role: "Parent of 8th Grader",
       image: "https://randomuser.me/api/portraits/women/7.jpg"
@@ -64,7 +67,8 @@ const Testimonials: React.FC = () => {
       quote: "Writing used to feel like a punishment. Now it feels like something I can be good at. I actually kind of enjoy it now.",
       author: "Ariana M.",
       role: "7th Grade Student",
-      image: "https://randomuser.me/api/portraits/women/9.jpg"
+      image: "https://randomuser.me/api/portraits/women/19.jpg",
+      isStudent: true
     }
   ];
 
@@ -84,9 +88,8 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="p-8 testimonial-card flex flex-col h-full">
               <div className="flex flex-col h-full">
-                <div className="text-4xl text-exceed-blue mb-4">"</div>
                 <p className="text-gray-700 italic flex-grow mb-6">
-                  {testimonial.quote}
+                  "{testimonial.quote}"
                 </p>
                 <div className="flex items-center mt-auto">
                   <Avatar className="h-12 w-12 mr-4 border-2 border-exceed-light">
