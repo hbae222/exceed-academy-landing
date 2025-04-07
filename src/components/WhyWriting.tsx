@@ -24,7 +24,7 @@ const WhyWriting: React.FC = () => {
             </p>
             <div className="space-y-6 text-gray-700 text-lg">
               <p>
-                Critical thinking, original voice, and persuasive structure can't be faked — 
+                Critical thinking, original voice, and persuasive structure can't be faked - 
                 and colleges, scholarships, and future employers know it.
               </p>
               <p>
