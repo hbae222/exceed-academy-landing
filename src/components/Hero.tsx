@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -23,12 +22,26 @@ const Hero: React.FC = () => {
               
               <div className="flex items-center justify-start mt-6">
                 <div className="relative flex -space-x-2 mr-4">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Avatar key={i} className="border-2 border-white h-10 w-10">
-                      <AvatarImage src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'women' : 'men'}/${i + 5}.jpg`} />
-                      <AvatarFallback>ST</AvatarFallback>
-                    </Avatar>
-                  ))}
+                  <Avatar className="border-2 border-white h-10 w-10">
+                    <AvatarImage src="https://randomuser.me/api/portraits/women/28.jpg" />
+                    <AvatarFallback>ST</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="border-2 border-white h-10 w-10">
+                    <AvatarImage src="https://randomuser.me/api/portraits/men/25.jpg" />
+                    <AvatarFallback>ST</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="border-2 border-white h-10 w-10">
+                    <AvatarImage src="https://randomuser.me/api/portraits/women/36.jpg" />
+                    <AvatarFallback>ST</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="border-2 border-white h-10 w-10">
+                    <AvatarImage src="https://randomuser.me/api/portraits/men/32.jpg" />
+                    <AvatarFallback>ST</AvatarFallback>
+                  </Avatar>
+                  <Avatar className="border-2 border-white h-10 w-10">
+                    <AvatarImage src="https://randomuser.me/api/portraits/women/40.jpg" />
+                    <AvatarFallback>ST</AvatarFallback>
+                  </Avatar>
                 </div>
                 <div className="flex items-center">
                   <div className="flex mr-2">

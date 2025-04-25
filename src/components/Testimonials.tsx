@@ -17,57 +17,57 @@ const Testimonials: React.FC = () => {
       quote: "We were struggling to get our 7th grader to care about writing. After just two months with Exceed, he's turning in polished work and actually proud of it.",
       author: "Karen M.",
       role: "Parent of Middle Schooler",
-      image: "https://randomuser.me/api/portraits/women/1.jpg"
+      image: "https://randomuser.me/api/portraits/women/52.jpg" // Older parent
     },
     {
       quote: "The feedback is detailed, actionable, and encouraging. Our daughter went from B's to consistent A's in English.",
       author: "James T.",
       role: "Parent of 10th Grader",
-      image: "https://randomuser.me/api/portraits/men/2.jpg"
+      image: "https://randomuser.me/api/portraits/men/45.jpg" // Older parent
     },
     {
       quote: "Exceed helped my son unlock his voice for his college essays. He got accepted into three of his top choices.",
-      author: "Meghan F.",
+      author: "Wei L.",
       role: "Parent of High School Senior",
-      image: "https://randomuser.me/api/portraits/women/3.jpg"
+      image: "https://randomuser.me/api/portraits/women/79.jpg" // Asian parent
     },
     {
       quote: "I loved the comments I got - they made me think about what I was really trying to say. I rewrote my whole intro and it felt way stronger.",
-      author: "Sofia D.",
+      author: "Mei Chen",
       role: "9th Grade Student",
-      image: "https://randomuser.me/api/portraits/women/15.jpg",
+      image: "https://randomuser.me/api/portraits/women/22.jpg", // Young Asian student
       isStudent: true
     },
     {
       quote: "We homeschool and have tried multiple writing programs. Nothing clicked until we found Exceed. Their editors really 'get' how to teach through feedback.",
-      author: "Tanya W.",
+      author: "Sarah K.",
       role: "Homeschooling Parent",
-      image: "https://randomuser.me/api/portraits/women/5.jpg"
+      image: "https://randomuser.me/api/portraits/women/48.jpg" // Older parent
     },
     {
       quote: "The turn-around is quick, and the advice is gold. I actually learned more from one round of feedback than I do in some of my English classes.",
-      author: "Jayden L.",
+      author: "Jin Park",
       role: "11th Grade Student",
-      image: "https://randomuser.me/api/portraits/men/6.jpg",
+      image: "https://randomuser.me/api/portraits/men/23.jpg", // Young Asian student
       isStudent: true
     },
     {
       quote: "As a working parent, I love that we can submit essays on our schedule and get meaningful help - no scheduling stress.",
-      author: "Rebecca C.",
+      author: "Michael C.",
       role: "Parent of 8th Grader",
-      image: "https://randomuser.me/api/portraits/women/7.jpg"
+      image: "https://randomuser.me/api/portraits/men/53.jpg" // Older parent
     },
     {
       quote: "My child has special learning needs, and I was nervous about online tutoring. But their team was thoughtful and matched us with a tutor who's made a big difference.",
-      author: "Steven R.",
+      author: "Hiroshi T.",
       role: "Parent of 6th Grader",
-      image: "https://randomuser.me/api/portraits/men/8.jpg"
+      image: "https://randomuser.me/api/portraits/men/75.jpg" // Asian parent
     },
     {
       quote: "Writing used to feel like a punishment. Now it feels like something I can be good at. I actually kind of enjoy it now.",
-      author: "Ariana M.",
+      author: "Lisa W.",
       role: "7th Grade Student",
-      image: "https://randomuser.me/api/portraits/women/19.jpg",
+      image: "https://randomuser.me/api/portraits/women/24.jpg", // Young student
       isStudent: true
     }
   ];
