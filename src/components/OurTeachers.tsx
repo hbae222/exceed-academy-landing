@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from "@/components/ui/card";
 
@@ -35,7 +34,7 @@ const OurTeachers: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 pt-4">
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/1200px-Harvard_shield_wreath.svg.png" alt="Harvard" className="h-12 object-contain" />
+              <img src="/lovable-uploads/a45248c8-ac8c-4170-9881-4b8453e6ac09.png" alt="Harvard" className="h-12 object-contain" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1424px-Stanford_Cardinal_logo.svg.png" alt="Stanford" className="h-12 object-contain" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley" className="h-12 object-contain" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/New_York_University_Seal.svg/1200px-New_York_University_Seal.svg.png" alt="NYU" className="h-12 object-contain" />
