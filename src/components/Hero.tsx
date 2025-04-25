@@ -23,23 +23,23 @@ const Hero: React.FC = () => {
               <div className="flex items-center justify-start mt-6">
                 <div className="relative flex -space-x-2 mr-4">
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/women/28.jpg" />
+                    <AvatarImage src="https://randomuser.me/api/portraits/women/63.jpg" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/men/25.jpg" />
+                    <AvatarImage src="https://randomuser.me/api/portraits/men/77.jpg" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/women/36.jpg" />
+                    <AvatarImage src="https://randomuser.me/api/portraits/women/79.jpg" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/men/32.jpg" />
+                    <AvatarImage src="https://randomuser.me/api/portraits/men/52.jpg" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/women/40.jpg" />
+                    <AvatarImage src="https://randomuser.me/api/portraits/women/31.jpg" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                 </div>
