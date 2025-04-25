@@ -39,7 +39,7 @@ const OurTeachers: React.FC = () => {
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley" className="h-12 object-contain" />
               <img src="/lovable-uploads/4bf03c40-5617-4c73-a064-95eb62dfc3c4.png" alt="NYU" className="h-12 object-contain" />
               <img src="/lovable-uploads/3ffbf218-10df-4038-a368-2d87d72aa610.png" alt="Columbia" className="h-12 object-contain" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Yale_University_Shield_1.svg/1200px-Yale_University_Shield_1.svg.png" alt="Yale" className="h-12 object-contain" />
+              <img src="/lovable-uploads/29240d9b-000c-4d7c-b95a-9f6ba8111af9.png" alt="Yale" className="h-12 object-contain" />
             </div>
           </div>
         </div>
