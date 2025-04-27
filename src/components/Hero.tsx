@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -72,15 +73,35 @@ const Hero: React.FC = () => {
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {[
-              { name: "Harvard", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/1200px-Harvard_shield_wreath.svg.png" },
-              { name: "Stanford", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png" },
-              { name: "UC Berkeley", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" },
-              { name: "NYU", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/New_York_University_Seal.svg/1200px-New_York_University_Seal.svg.png" },
-              { name: "Columbia", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Columbia_University_shield.svg/1200px-Columbia_University_shield.svg.png" }
+              { 
+                name: "Harvard", 
+                logo: "https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png", 
+                className: "bg-white p-2 rounded-lg"
+              },
+              { 
+                name: "Stanford", 
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png" 
+              },
+              { 
+                name: "UC Berkeley", 
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" 
+              },
+              { 
+                name: "NYU", 
+                logo: "https://logos-world.net/wp-content/uploads/2021/09/NYU-Logo.png",
+                className: "bg-white p-2 rounded-lg" 
+              },
+              { 
+                name: "Columbia", 
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Columbia_University_shield.svg/1200px-Columbia_University_shield.svg.png",
+                className: "bg-white p-2 rounded-lg" 
+              }
             ].map((school) => (
               <div key={school.name} className="flex flex-col items-center">
-                <img src={school.logo} alt={school.name} className="h-12 w-auto mb-2" />
-                <div className="text-exceed-navy font-playfair text-sm font-semibold">
+                <div className={`h-16 w-24 flex items-center justify-center ${school.className || ""}`}>
+                  <img src={school.logo} alt={school.name} className="h-auto w-auto max-h-full" />
+                </div>
+                <div className="text-exceed-navy font-playfair text-sm font-semibold mt-2">
                   {school.name}
                 </div>
               </div>
