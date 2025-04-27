@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -24,11 +23,11 @@ const Hero: React.FC = () => {
               <div className="flex items-center justify-start mt-6">
                 <div className="relative flex -space-x-2 mr-4">
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/women/63.jpg" />
+                    <AvatarImage src="/lovable-uploads/8e298df0-88e2-46b3-aaeb-4a0c79541533.png" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/men/77.jpg" />
+                    <AvatarImage src="/lovable-uploads/0498c871-62d5-4546-a2cb-27af761aecf1.png" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
@@ -36,7 +35,7 @@ const Hero: React.FC = () => {
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
-                    <AvatarImage src="https://randomuser.me/api/portraits/men/52.jpg" />
+                    <AvatarImage src="/lovable-uploads/d7990cd7-3285-42e0-a158-ad1139d193b2.png" />
                     <AvatarFallback>ST</AvatarFallback>
                   </Avatar>
                   <Avatar className="border-2 border-white h-10 w-10">
