@@ -7,6 +7,20 @@ import { Check } from "lucide-react";
 const Pricing: React.FC = () => {
   const plans = [
     {
+      name: "Single Edit",
+      price: "$49",
+      period: "one-time",
+      description: "Perfect for a single essay",
+      features: [
+        "Professional editing",
+        "Detailed feedback",
+        "Email support",
+        "48-hour turnaround",
+        "Special discount price"
+      ],
+      highlight: true
+    },
+    {
       name: "Basic",
       price: "$60",
       period: "per month",
@@ -31,20 +45,6 @@ const Pricing: React.FC = () => {
         "Progress tracking",
         "Most popular choice"
       ],
-      highlight: true
-    },
-    {
-      name: "Premium",
-      price: "$240",
-      period: "per month",
-      description: "4 essays per month",
-      features: [
-        "Professional editing",
-        "Detailed feedback",
-        "Priority support",
-        "Progress tracking",
-        "Best for consistent growth"
-      ],
       highlight: false
     }
   ];
@@ -54,10 +54,10 @@ const Pricing: React.FC = () => {
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-exceed-navy mb-4">
-            Pricing
+            Buy One Edit at a Discounted Price
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Simple. Flexible. Cancel Anytime.
+            Try our professional editing services with a special one-time discount, or choose a monthly plan for ongoing support.
           </p>
         </div>
         
@@ -95,7 +95,7 @@ const Pricing: React.FC = () => {
         </div>
         
         <div className="mt-12 text-center text-gray-700">
-          <p>Pay month-to-month. No long-term contracts. Upgrade or cancel at any time.</p>
+          <p>All plans include our detailed feedback system. No long-term contracts required.</p>
         </div>
       </div>
     </section>

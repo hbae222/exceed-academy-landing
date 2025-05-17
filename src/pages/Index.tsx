@@ -7,11 +7,12 @@ import WhyWeWork from '@/components/WhyWeWork';
 import OurTeachers from '@/components/OurTeachers';
 import WritingFocus from '@/components/WritingFocus';
 import HowItWorks from '@/components/HowItWorks';
-import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
+import Pricing from '@/components/Pricing';
 import Blog from '@/components/Blog';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
+import ContactUs from '@/components/ContactUs';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -25,11 +26,12 @@ const Index = () => {
         <OurTeachers />
         <WritingFocus />
         <HowItWorks />
-        <Pricing />
         <Testimonials />
+        <Pricing />
         <Blog />
         <FAQ />
         <CTA />
+        <ContactUs />
         <Footer />
       </div>
     </div>
