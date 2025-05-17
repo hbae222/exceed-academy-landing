@@ -38,8 +38,8 @@ const BlogIndex: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-exceed-light py-12">
-        <div className="section-container">
+      <div className="py-12">
+        <div className="section-container bg-white/90 rounded-2xl shadow-lg">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-exceed-navy mb-4">
               Writing Resources & Insights

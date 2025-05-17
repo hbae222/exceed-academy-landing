@@ -46,14 +46,31 @@
 
   html {
     @apply scroll-smooth;
+    min-height: 100%;
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply text-foreground font-inter;
+    background: linear-gradient(120deg, #9b87f5 0%, #33C3F0 50%, #9b87f5 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4 {
     @apply font-playfair;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -74,4 +91,3 @@
     @apply bg-exceed-blue hover:bg-exceed-indigo text-white font-medium py-3 px-6 rounded-md transition-colors duration-300 shadow-md hover:shadow-lg;
   }
 }
-
