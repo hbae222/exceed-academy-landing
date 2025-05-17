@@ -24,7 +24,7 @@ const WhyWeWork: React.FC = () => {
   ];
 
   return (
-    <section className="bg-exceed-light py-20">
+    <section className="py-20">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 order-2 lg:order-1">

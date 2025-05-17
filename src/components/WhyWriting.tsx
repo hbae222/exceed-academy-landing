@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 
 const WhyWriting: React.FC = () => {
   return (
-    <section id="why-writing" className="bg-white py-16 md:py-20">
+    <section id="why-writing" className="py-16 md:py-20">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="rounded-xl overflow-hidden shadow-xl order-2 lg:order-1">

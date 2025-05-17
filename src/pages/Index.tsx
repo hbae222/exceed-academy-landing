@@ -20,20 +20,40 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <div className="bg-white/90 rounded-t-3xl mt-8">
+      <div className="section-wrapper bg-white">
         <WhyWriting />
-        <WhyWeWork />
-        <PricingCalculator />
-        <OurTeachers />
-        <WritingFocus />
-        <HowItWorks />
-        <Testimonials />
-        <Blog />
-        <FAQ />
-        <CTA />
-        <ContactUs />
-        <Footer />
       </div>
+      <div className="section-wrapper bg-exceed-light">
+        <WhyWeWork />
+      </div>
+      <div className="section-wrapper bg-white">
+        <PricingCalculator />
+      </div>
+      <div className="section-wrapper bg-exceed-light">
+        <OurTeachers />
+      </div>
+      <div className="section-wrapper bg-white">
+        <WritingFocus />
+      </div>
+      <div className="section-wrapper bg-exceed-light">
+        <HowItWorks />
+      </div>
+      <div className="section-wrapper bg-white">
+        <Testimonials />
+      </div>
+      <div className="section-wrapper bg-exceed-light">
+        <Blog />
+      </div>
+      <div className="section-wrapper bg-white">
+        <FAQ />
+      </div>
+      <div className="section-wrapper">
+        <CTA />
+      </div>
+      <div className="section-wrapper bg-exceed-light">
+        <ContactUs />
+      </div>
+      <Footer />
     </div>
   );
 };
