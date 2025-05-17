@@ -8,7 +8,7 @@ import OurTeachers from '@/components/OurTeachers';
 import WritingFocus from '@/components/WritingFocus';
 import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
-import Pricing from '@/components/Pricing';
+import PricingCalculator from '@/components/PricingCalculator';
 import Blog from '@/components/Blog';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
@@ -23,11 +23,11 @@ const Index = () => {
       <div className="bg-white/90 rounded-t-3xl mt-8">
         <WhyWriting />
         <WhyWeWork />
+        <PricingCalculator />
         <OurTeachers />
         <WritingFocus />
         <HowItWorks />
         <Testimonials />
-        <Pricing />
         <Blog />
         <FAQ />
         <CTA />
