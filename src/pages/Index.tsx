@@ -9,6 +9,7 @@ import WritingFocus from '@/components/WritingFocus';
 import HowItWorks from '@/components/HowItWorks';
 import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
+import Blog from '@/components/Blog';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
@@ -25,6 +26,7 @@ const Index = () => {
       <HowItWorks />
       <Pricing />
       <Testimonials />
+      <Blog />
       <FAQ />
       <CTA />
       <Footer />
