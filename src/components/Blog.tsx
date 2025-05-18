@@ -34,7 +34,7 @@ const Blog: React.FC = () => {
   ];
 
   return (
-    <section id="blog" className="py-16 bg-white">
+    <section id="blog" className="py-16">
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-exceed-navy mb-4">
@@ -75,12 +75,6 @@ const Blog: React.FC = () => {
               </CardFooter>
             </Card>
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <Button asChild variant="outline" className="border-exceed-blue text-exceed-blue hover:bg-exceed-light">
-            <Link to="/blog">View All Articles</Link>
-          </Button>
         </div>
       </div>
     </section>

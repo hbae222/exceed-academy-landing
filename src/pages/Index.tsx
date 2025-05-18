@@ -41,7 +41,7 @@ const Index = () => {
       <div className="section-wrapper bg-white">
         <Testimonials />
       </div>
-      <div className="section-wrapper bg-exceed-light">
+      <div className="section-wrapper bg-exceed-blue">
         <Blog />
       </div>
       <div className="section-wrapper bg-white">
