@@ -53,9 +53,9 @@ const WhyWeWork: React.FC = () => {
           
           <div className="rounded-xl overflow-hidden shadow-xl order-1 lg:order-2">
             <img 
-              src="/lovable-uploads/3ffbf218-10df-4038-a368-2d87d72aa610.png" 
-              alt="Students learning" 
-              className="w-full h-[400px] object-cover"
+              src="/lovable-uploads/e84fd8ad-9178-4240-83b6-07f3f86c25ed.png" 
+              alt="Our writing experts team" 
+              className="w-full h-[400px] object-contain bg-white"
             />
           </div>
         </div>
