@@ -11,6 +11,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import BlogIndex from "./pages/BlogIndex";
 import BlogArticle from "./pages/BlogArticle";
 import SubscriptionSuccess from "./pages/SubscriptionSuccess";
+import Auth from "./pages/Auth";
+import AuthCallback from "./pages/AuthCallback";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/auth-callback" element={<AuthCallback />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/blog" element={<BlogIndex />} />

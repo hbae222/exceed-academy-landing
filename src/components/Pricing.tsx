@@ -1,11 +1,22 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Lock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Json } from "@/integrations/supabase/types";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle,
+  DialogDescription,
+  DialogFooter
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface Plan {
   id: number;
@@ -28,6 +39,10 @@ const Pricing: React.FC = () => {
   const [processingPlan, setProcessingPlan] = useState<string | null>(null);
   const [userSubscription, setUserSubscription] = useState<any>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [checkoutDialogOpen, setCheckoutDialogOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<DisplayPlan | null>(null);
+  const [checkoutEmail, setCheckoutEmail] = useState('');
+  const [createAccount, setCreateAccount] = useState(true);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -71,7 +86,7 @@ const Pricing: React.FC = () => {
           description: plan.description,
           // Convert JSON features to strings, ensuring they're all strings
           features: Array.isArray(plan.features) 
-            ? plan.features.map(feature => String(feature))
+            ? (plan.features as Json[]).map(feature => String(feature))
             : [],
           highlight: plan.name === "Standard", // Highlight the middle plan
           stripe_price_id: plan.stripe_price_id
@@ -115,21 +130,33 @@ const Pricing: React.FC = () => {
     checkSubscription();
   }, [isAuthenticated, toast]);
 
-  const handlePlanSelect = async (plan: DisplayPlan) => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication Required",
-        description: "Please log in to subscribe to a plan.",
-        variant: "destructive"
-      });
-      return;
+  const handlePlanSelect = (plan: DisplayPlan) => {
+    if (isAuthenticated) {
+      // For authenticated users, proceed directly to Stripe checkout
+      startCheckout(plan);
+    } else {
+      // For non-authenticated users, show email collection dialog
+      setSelectedPlan(plan);
+      setCheckoutDialogOpen(true);
     }
+  };
+
+  const startCheckout = async (plan: DisplayPlan, email?: string) => {
+    setProcessingPlan(plan.stripe_price_id);
     
     try {
-      setProcessingPlan(plan.stripe_price_id);
+      const checkoutData: any = {
+        priceId: plan.stripe_price_id
+      };
+
+      // If email was provided (guest checkout)
+      if (email) {
+        checkoutData.email = email;
+        checkoutData.createAccount = createAccount;
+      }
       
       const { data, error } = await supabase.functions.invoke('create-checkout', {
-        body: { priceId: plan.stripe_price_id }
+        body: checkoutData
       });
       
       if (error) throw error;
@@ -143,9 +170,26 @@ const Pricing: React.FC = () => {
         description: "Could not initiate checkout. Please try again later.",
         variant: "destructive"
       });
-    } finally {
       setProcessingPlan(null);
     }
+  };
+
+  const handleCheckoutSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!selectedPlan) return;
+    
+    if (!checkoutEmail || !checkoutEmail.includes('@')) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setCheckoutDialogOpen(false);
+    startCheckout(selectedPlan, checkoutEmail);
   };
 
   const isCurrentPlan = (planId: number) => {
@@ -270,13 +314,6 @@ const Pricing: React.FC = () => {
                       'Choose Plan'
                     )}
                   </Button>
-                  
-                  {!isAuthenticated && (
-                    <div className="mt-3 text-center text-sm text-gray-500 flex items-center justify-center">
-                      <Lock className="h-3 w-3 mr-1" />
-                      Login required
-                    </div>
-                  )}
                 </div>
               </Card>
             ))}
@@ -286,6 +323,56 @@ const Pricing: React.FC = () => {
         <div className="mt-12 text-center text-gray-700">
           <p>All plans include our detailed feedback system. Cancel anytime.</p>
         </div>
+        
+        {/* Checkout Dialog for Non-authenticated Users */}
+        <Dialog open={checkoutDialogOpen} onOpenChange={setCheckoutDialogOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Subscribe to {selectedPlan?.name}</DialogTitle>
+              <DialogDescription>
+                Enter your email to continue with your subscription for {selectedPlan?.price}/{selectedPlan?.period}.
+              </DialogDescription>
+            </DialogHeader>
+            
+            <form onSubmit={handleCheckoutSubmit} className="space-y-4 py-4">
+              <div className="space-y-2">
+                <Label htmlFor="checkout-email">Email Address</Label>
+                <Input 
+                  id="checkout-email"
+                  type="email"
+                  placeholder="your@email.com"
+                  value={checkoutEmail}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setCheckoutEmail(e.target.value)}
+                  required
+                />
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <Checkbox 
+                  id="create-account"
+                  checked={createAccount}
+                  onCheckedChange={(checked: boolean) => setCreateAccount(checked)}
+                />
+                <Label htmlFor="create-account" className="text-sm">
+                  Create an account with this email
+                </Label>
+              </div>
+              
+              <DialogFooter className="pt-4">
+                <Button 
+                  type="button" 
+                  variant="outline" 
+                  onClick={() => setCheckoutDialogOpen(false)}
+                >
+                  Cancel
+                </Button>
+                <Button type="submit" className="bg-exceed-blue hover:bg-exceed-indigo">
+                  Continue to Checkout
+                </Button>
+              </DialogFooter>
+            </form>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
