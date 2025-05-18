@@ -20,8 +20,24 @@ serve(async (req) => {
     // Get request body
     const { priceId, email, createAccount, return_url } = await req.json();
     
+    console.log("Checkout request received with price ID:", priceId, "email:", email);
+    
     if (!priceId) {
       throw new Error("Price ID is required");
+    }
+
+    // Verify that the price exists in Stripe before proceeding
+    try {
+      const price = await stripe.prices.retrieve(priceId);
+      console.log("Price successfully verified in Stripe:", price.id);
+    } catch (priceError) {
+      console.error("Invalid price ID:", priceError.message);
+      return new Response(JSON.stringify({ 
+        error: `The price ID '${priceId}' does not exist in your Stripe account. Please check your database and Stripe configuration.`
+      }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
     }
 
     // Create Supabase client
@@ -121,6 +137,7 @@ serve(async (req) => {
             await supabase.from("subscriptions").insert({
               user_id: newUser.user.id,
               stripe_customer_id: customerId,
+              plan_id: 1, // Default to Basic plan, will be updated after checkout
             });
             
             // Store metadata in Stripe customer

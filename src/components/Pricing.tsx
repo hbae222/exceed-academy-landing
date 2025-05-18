@@ -43,6 +43,7 @@ const Pricing: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<DisplayPlan | null>(null);
   const [checkoutEmail, setCheckoutEmail] = useState('');
   const [createAccount, setCreateAccount] = useState(true);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -131,6 +132,9 @@ const Pricing: React.FC = () => {
   }, [isAuthenticated, toast]);
 
   const handlePlanSelect = (plan: DisplayPlan) => {
+    // Clear any previous error messages
+    setErrorMessage(null);
+    
     if (isAuthenticated) {
       // For authenticated users, proceed directly to Stripe checkout
       startCheckout(plan);
@@ -155,21 +159,39 @@ const Pricing: React.FC = () => {
         checkoutData.createAccount = createAccount;
       }
       
+      console.log("Starting checkout with data:", checkoutData);
+      
       const { data, error } = await supabase.functions.invoke('create-checkout', {
         body: checkoutData
       });
       
-      if (error) throw error;
+      if (error) {
+        throw new Error(error.message);
+      }
+      
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      
+      if (!data.url) {
+        throw new Error("No checkout URL returned from the server");
+      }
       
       // Redirect to Stripe checkout
       window.location.href = data.url;
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error creating checkout session:", error);
+      
+      // Set the error message for display
+      setErrorMessage(error.message);
+      
+      // Show toast with error
       toast({
         title: "Checkout Error",
-        description: "Could not initiate checkout. Please try again later.",
+        description: error.message || "Could not initiate checkout. Please try again later.",
         variant: "destructive"
       });
+      
       setProcessingPlan(null);
     }
   };
@@ -254,6 +276,17 @@ const Pricing: React.FC = () => {
               >
                 Manage Subscription
               </Button>
+            </div>
+          )}
+          
+          {/* Display error message if there is one */}
+          {errorMessage && (
+            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md max-w-lg mx-auto text-left">
+              <h3 className="font-medium text-red-800 mb-1">Checkout Error</h3>
+              <p className="text-sm text-red-700">{errorMessage}</p>
+              <p className="text-xs mt-2 text-red-600">
+                Please check if your Stripe price IDs in the database match those in your Stripe account.
+              </p>
             </div>
           )}
         </div>
