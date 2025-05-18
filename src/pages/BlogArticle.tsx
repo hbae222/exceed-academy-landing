@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -210,19 +211,92 @@ const blogArticles = {
     imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
   },
   'college-essay-tips': {
-    title: "College Essays That Stand Out: Tips from Admissions Officers",
+    title: "How to Write a Standout College Essay: Tips from Former Admissions Officers",
     content: `
-      <h2>Introduction</h2>
-      <p>This is a placeholder for the full article content. The actual content will be added later.</p>
-      <h2>Key Points</h2>
+      <h2>Proven Strategies to Catch Attention and Get Accepted</h2>
+      <p>Your college essay isn't just another assignment — it's a critical piece of your application that can set you apart from thousands of other applicants. According to former admissions officers from top schools like Harvard and Stanford, a strong essay can be the difference between an acceptance letter and a waitlist.</p>
+
+      <p>Here's how to write a college essay that gets noticed — and remembered.</p>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Students celebrating graduation outside a university" class="w-full h-auto rounded-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">Students celebrating their college acceptances and future graduation</p>
+      </div>
+
+      <h2>Why Your College Essay Matters</h2>
+      <p>Admissions officers read hundreds of essays a day. Most are well-written — but forgettable. What stands out are the essays that tell a genuine story, reveal your character, and make a reader pause.</p>
+
+      <p><em>SEO Tip: Include phrases like "why college essays matter" and "importance of the personal statement."</em></p>
+
+      <h2>1. Start with a Hook That Feels Authentic</h2>
+      <p>Open with a moment, memory, or image that draws the reader in. Don't try to sound impressive — aim for honest and unique.</p>
+
+      <p><strong>Weak Start:</strong><br>
+      "I've always wanted to attend a prestigious university."</p>
+
+      <p><strong>Stronger Start:</strong><br>
+      "The night before my first robotics competition, my circuit board caught fire."</p>
+
+      <p>Start with action, curiosity, or conflict.</p>
+
+      <h2>2. Make It Personal — Not Just Impressive</h2>
+      <p>Admissions officers want to get to know who you are, not just what you've done. Focus less on achievements and more on what shaped you.</p>
+
+      <p>Instead of listing accomplishments, share the meaning behind them.</p>
+
+      <p><strong>Example:</strong><br>
+      Don't just say you led a food drive. Describe how organizing it changed your view on leadership and service.</p>
+
+      <p><em>SEO Tip: Include keyword variations like "personal college essay examples" or "how to write about yourself in a college essay."</em></p>
+
+      <h2>3. Focus on One Story, Not Your Whole Life</h2>
+      <p>Resist the urge to cover everything. Instead, go deep on one theme or experience that reveals something about you.</p>
+
+      <p>Think:</p>
       <ul>
-        <li>Be authentic in your voice</li>
-        <li>Focus on a specific story or experience</li>
-        <li>Demonstrate growth and self-reflection</li>
-        <li>Connect your experience to your future goals</li>
-        <li>Edit ruthlessly for clarity and impact</li>
+        <li>A challenge you overcame</li>
+        <li>A moment of growth or failure</li>
+        <li>A unique family tradition or perspective</li>
       </ul>
-      <p>Check back soon for the complete guide!</p>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="Student writing college essay" class="w-full h-auto rounded-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">A student drafting their college admissions essay</p>
+      </div>
+
+      <h2>4. Use Your Voice — Not a Thesaurus</h2>
+      <p>Your essay should sound like you, not a dictionary. Avoid trying to sound overly academic or formal. Use natural, clear language that reflects your voice and personality.</p>
+
+      <p><strong>Tip:</strong> Read your essay out loud. If it doesn't sound like something you'd say in a thoughtful conversation, revise it.</p>
+
+      <h2>5. Connect Back to the College</h2>
+      <p>Admissions readers love when students show why they're a good fit. If your essay naturally ties in with the college's values, programs, or mission — mention it.</p>
+
+      <p>But avoid generic flattery ("Your school is prestigious"). Be specific.</p>
+
+      <p><strong>Example:</strong> "The interdisciplinary approach of Stanford's Symbolic Systems program mirrors the way I combine logic and creativity in my research."</p>
+
+      <h2>6. Revise Ruthlessly</h2>
+      <p>The best essays go through many drafts. After your first version:</p>
+      <ul>
+        <li>Cut repetition</li>
+        <li>Sharpen your structure</li>
+        <li>Ask a trusted mentor or teacher for feedback</li>
+        <li>Make sure your essay answers the prompt and stays focused</li>
+      </ul>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="Editing a college essay" class="w-full h-auto rounded-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">Final revisions and edits to make your essay shine</p>
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>Your college essay is your chance to speak directly to admissions officers — to be seen as a real, multidimensional person. With a strong opening, honest storytelling, and thoughtful reflection, your essay can make a lasting impression.</p>
+
+      <div class="bg-exceed-light p-6 rounded-xl my-8 border-l-4 border-exceed-blue">
+        <h4 class="font-bold text-exceed-navy mb-2">Need help with your college essay?</h4>
+        <p>👉 Submit your essay for expert feedback from former admissions officers</p>
+      </div>
     `,
     author: "Sarah Johnson",
     date: "April 12, 2025",
