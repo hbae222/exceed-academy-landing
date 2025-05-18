@@ -18,10 +18,10 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-exceed-navy leading-tight">
-              Transform Your Student's Writing Skills
+              We help your student become an A+ writer
             </h1>
             <p className="text-xl text-gray-700">
-              Professional editing, personalized feedback, and effective coaching for students in grades 6-12.
+              Professional writing coaching and personalized feedback for students in grades 6-12.
             </p>
             <div className="pt-4 space-y-6">
               <Button 
