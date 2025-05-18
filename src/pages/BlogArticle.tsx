@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -122,17 +121,89 @@ const blogArticles = {
   'creative-writing-techniques': {
     title: "Creative Writing Techniques That Captivate Readers",
     content: `
-      <h2>Introduction</h2>
-      <p>This is a placeholder for the full article content. The actual content will be added later.</p>
-      <h2>Key Points</h2>
+      <h2>Top Strategies to Bring Your Stories to Life</h2>
+      <p>If you've ever wondered how to write stories that truly connect with readers, you're not alone. Whether you're a student looking to enhance your creative writing for class or an aspiring author dreaming of publishing, learning a few powerful storytelling techniques can completely transform your writing.</p>
+
+      <p>In this guide, you'll discover how to write more vividly, build tension, and keep readers turning the page.</p>
+
+      <h2>Why Creative Writing Skills Matter</h2>
+      <p>Creative writing helps students develop imagination, empathy, and communication skills. It also sharpens grammar and vocabulary — essential for academic success and storytelling alike.</p>
+      <p>If you want to write stories that resonate, these techniques are for you.</p>
+
+      <h2>1. Show, Don't Tell</h2>
+      <p>One of the golden rules of creative writing: Don't tell the reader what to feel — show them through description.</p>
+      <p><strong>Telling:</strong> "She was angry."<br>
+      <strong>Showing:</strong> "Her jaw tightened, and her fists clenched around the crumpled letter."</p>
+      <p>Use sensory details, body language, and setting to paint a scene instead of stating emotions outright.</p>
+
+      <div class="my-8 p-6 bg-blue-50 rounded-xl">
+        <h4 class="text-exceed-navy font-bold mb-2">SEO Tip</h4>
+        <p>Include the phrase "show don't tell writing examples" in captions, alt text, or a sidebar tip box.</p>
+      </div>
+
+      <h2>2. Use Vivid Descriptions</h2>
+      <p>Your goal is to help readers see, hear, and feel what's happening. Choose precise nouns, active verbs, and colorful adjectives.</p>
+      <p><strong>Instead of:</strong> "It was a nice day."<br>
+      <strong>Try:</strong> "Sunlight spilled across the sidewalk, and a warm breeze tugged at the edges of her jacket."</p>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80" alt="Split image showing telling vs showing in writing" class="w-full h-auto rounded-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">Visual comparison of "telling" versus "showing" in creative writing</p>
+      </div>
+
+      <h2>3. Create Relatable Characters</h2>
+      <p>Great stories start with characters readers care about. Give your characters wants, flaws, and fears.</p>
+      <p>Ask:</p>
       <ul>
-        <li>Show, don't tell</li>
-        <li>Develop distinctive character voices</li>
-        <li>Use sensory details</li>
-        <li>Create conflict and tension</li>
-        <li>Experiment with different narrative perspectives</li>
+        <li>What does your character want more than anything?</li>
+        <li>What's standing in their way?</li>
+        <li>How will they change by the end of the story?</li>
       </ul>
-      <p>Check back soon for the complete guide!</p>
+      <p><strong>Tip:</strong> Even in short pieces, a well-developed character creates emotional impact.</p>
+
+      <h2>4. Build Tension with Conflict</h2>
+      <p>Stories thrive on conflict. Introduce challenges that test your characters and raise the stakes.</p>
+      <p>"The storm wasn't the only thing coming that night."</p>
+      <p>Use pacing, short sentences, and cliffhangers to create suspense.</p>
+      
+      <div class="my-8 p-6 bg-blue-50 rounded-xl">
+        <h4 class="text-exceed-navy font-bold mb-2">SEO Tip</h4>
+        <p>Add keywords like "how to create tension in writing" and "story conflict examples."</p>
+      </div>
+
+      <h2>5. Use Dialogue That Feels Real</h2>
+      <p>Good dialogue:</p>
+      <ul>
+        <li>Reflects each character's personality</li>
+        <li>Moves the plot forward</li>
+        <li>Feels natural (but not boring)</li>
+      </ul>
+      <p><strong>✘</strong> "Hello, how are you today?"<br>
+      <strong>✔</strong> "You're late. Again."</p>
+      <p>Avoid overusing dialogue tags like "he said angrily." Let the words and actions show the emotion instead.</p>
+
+      <h2>6. Edit for Flow and Impact</h2>
+      <p>Even the most creative ideas need editing to shine. Read your work out loud, cut unnecessary words, and tighten your phrasing.</p>
+      <p>Ask:</p>
+      <ul>
+        <li>Does every sentence serve the story?</li>
+        <li>Are your descriptions helping or slowing things down?</li>
+        <li>Do you feel bored while reading? If so, your reader will too.</li>
+      </ul>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="Student reviewing printed pages with colorful notes" class="w-full h-auto rounded-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">A student revising their creative writing with notes and highlights</p>
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>Creative writing is more than putting words on a page — it's about crafting a world your reader can feel, see, and believe in. Use these techniques to improve your storytelling and express your unique voice with confidence.</p>
+      <p>Whether you're working on a short story for class, a personal narrative, or the next bestselling novel, these tips will help you write with purpose and passion.</p>
+
+      <div class="bg-exceed-light p-6 rounded-xl my-8 border-l-4 border-exceed-blue">
+        <h4 class="font-bold text-exceed-navy mb-2">Ready for expert feedback on your writing?</h4>
+        <p>👉 Submit your story for professional review and guidance</p>
+      </div>
     `,
     author: "Michael Rivera",
     date: "April 25, 2025",
