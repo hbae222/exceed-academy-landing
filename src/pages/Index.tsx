@@ -7,6 +7,7 @@ import WhyWeWork from '@/components/WhyWeWork';
 import OurTeachers from '@/components/OurTeachers';
 import WritingFocus from '@/components/WritingFocus';
 import HowItWorks from '@/components/HowItWorks';
+import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
 import PricingCalculator from '@/components/PricingCalculator';
 import Blog from '@/components/Blog';
@@ -39,6 +40,9 @@ const Index = () => {
         <HowItWorks />
       </div>
       <div className="section-wrapper bg-white">
+        <Pricing />
+      </div>
+      <div className="section-wrapper bg-exceed-light">
         <Testimonials />
       </div>
       <div className="section-wrapper bg-[#E8F4FF]">
