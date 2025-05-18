@@ -4,9 +4,102 @@ import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Book, BookOpen, Edit } from 'lucide-react';
 
 const blogArticles = {
+  'how-to-structure-an-essay': {
+    title: "How to Structure an Essay: A Step-by-Step Guide for Middle and High School Students",
+    content: `
+      <p>Whether you're in middle school writing your first literary response or in high school preparing for college-level assignments, knowing how to structure an essay is essential. A strong essay framework helps you organize your thoughts clearly and communicate your ideas effectively.</p>
+
+      <h2>Why Essay Structure Matters</h2>
+      <p>A good essay structure makes your writing easier to follow and more convincing. Teachers and admissions officers look for essays that flow logically, present strong arguments, and stay focused on the main idea.</p>
+      <p>Using a clear structure also boosts your grades and helps your writing stand out.</p>
+
+      <h2>The 3-Part Essay Structure Every Student Should Know</h2>
+      <h3>🧠 1. Introduction</h3>
+      <p>The introduction sets the stage. It should:</p>
+      <ul>
+        <li>Hook your reader with a question, fact, or story</li>
+        <li>Introduce your topic clearly</li>
+        <li>End with a thesis statement — the main point or argument of your essay</li>
+      </ul>
+      
+      <p><strong>Example Thesis Statement:</strong><br>
+      "School uniforms limit creativity and do not improve academic performance."</p>
+
+      <p><em>SEO Tip: Use the phrase "how to start an essay introduction" in your subheadings or metadata.</em></p>
+
+      <h3>✍️ 2. Body Paragraphs</h3>
+      <p>Each body paragraph should cover one key idea that supports your thesis. Use this structure:</p>
+      <ul>
+        <li>Topic sentence – introduces the paragraph's main idea</li>
+        <li>Evidence – facts, quotes, examples</li>
+        <li>Explanation – how your evidence supports your thesis</li>
+        <li>Transition – connects to the next paragraph</li>
+      </ul>
+
+      <p><strong>Example Paragraph Topic:</strong><br>
+      "Uniforms do not affect student performance, according to a 2022 study by XYZ University."</p>
+
+      <p><em>SEO Tip: Use variations like "essay body paragraph format" or "how to write body paragraphs in an essay."</em></p>
+
+      <div class="my-8 p-6 bg-blue-50 rounded-xl">
+        <h4 class="text-exceed-navy font-bold mb-2">Diagram of Essay Structure</h4>
+        <p>Introduction → Body Paragraphs → Conclusion</p>
+        <ul class="mt-3">
+          <li>Introduction: Hook, context, thesis</li>
+          <li>Body: Topic sentence, evidence, explanation, transition</li>
+          <li>Conclusion: Restate thesis, summarize key points, final thought</li>
+        </ul>
+      </div>
+
+      <h3>🎯 3. Conclusion</h3>
+      <p>The conclusion wraps up your essay and reinforces your main idea. It should:</p>
+      <ul>
+        <li>Restate your thesis in a fresh way</li>
+        <li>Summarize your key points</li>
+        <li>End with a strong final thought</li>
+      </ul>
+
+      <p><strong>Avoid:</strong></p>
+      <ul>
+        <li>Adding new arguments</li>
+        <li>Repeating your thesis word-for-word</li>
+        <li>Using weak phrases like "That's why…"</li>
+      </ul>
+
+      <p><strong>Stronger Closing Example:</strong><br>
+      "To help students thrive, schools should encourage individuality — not suppress it through rigid uniform policies."</p>
+
+      <h2>Bonus Essay Writing Tips for Students</h2>
+      <ul>
+        <li>Use transition words (e.g., furthermore, however, in contrast)</li>
+        <li>Avoid filler and repetition</li>
+        <li>Stick to one idea per paragraph</li>
+        <li>Always proofread and revise for flow and grammar</li>
+        <li>Use clear formatting: short paragraphs, consistent fonts, and subheadings</li>
+      </ul>
+
+      <p><strong>Pro Tip:</strong> Add keywords like "essay writing for beginners", "academic writing tips", and "high school essay guide" throughout your article (naturally!).</p>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="Student editing an essay" class="w-full h-auto rounded-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">A student working on essay revisions with highlighters and annotations</p>
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>Now that you understand how to structure an essay, writing becomes less stressful and more effective. A strong introduction, organized body paragraphs, and a thoughtful conclusion are the foundation of every successful essay — whether it's for English class, AP exams, or a college application.</p>
+
+      <div class="bg-exceed-light p-6 rounded-xl my-8 border-l-4 border-exceed-blue">
+        <h4 class="font-bold text-exceed-navy mb-2">Need personalized help structuring your essay?</h4>
+        <p>👉 Submit your essay for expert review and editing</p>
+      </div>
+    `,
+    author: "Dr. Emma Chen",
+    date: "May 18, 2025",
+    imageUrl: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+  },
   'improving-essay-structure': {
     title: "Improving Essay Structure: A Guide for Middle and High School Students",
     content: `

@@ -8,6 +8,14 @@ import { ExternalLink } from "lucide-react";
 const Blog: React.FC = () => {
   const blogPosts = [
     {
+      id: 'how-to-structure-an-essay',
+      title: "How to Structure an Essay: A Step-by-Step Guide for Middle and High School Students",
+      excerpt: "Learn how to write a well-structured essay that grabs attention, keeps readers engaged, and earns top grades.",
+      date: "May 18, 2025",
+      author: "Dr. Emma Chen",
+      imageUrl: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    },
+    {
       id: 'improving-essay-structure',
       title: "Improving Essay Structure: A Guide for Middle and High School Students",
       excerpt: "Learn the fundamentals of crafting well-structured essays that engage readers and earn top grades.",
@@ -22,14 +30,6 @@ const Blog: React.FC = () => {
       date: "April 25, 2025",
       author: "Michael Rivera",
       imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-    },
-    {
-      id: 'college-essay-tips',
-      title: "College Essays That Stand Out: Tips from Admissions Officers",
-      excerpt: "Insider advice on crafting college application essays that capture attention and show your unique perspective.",
-      date: "April 12, 2025",
-      author: "Sarah Johnson",
-      imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     }
   ];
 

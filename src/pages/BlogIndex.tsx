@@ -10,6 +10,14 @@ import { ExternalLink } from 'lucide-react';
 const BlogIndex: React.FC = () => {
   const blogPosts = [
     {
+      id: 'how-to-structure-an-essay',
+      title: "How to Structure an Essay: A Step-by-Step Guide for Middle and High School Students",
+      excerpt: "Learn how to write a well-structured essay that grabs attention, keeps readers engaged, and earns top grades.",
+      date: "May 18, 2025",
+      author: "Dr. Emma Chen",
+      imageUrl: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+    },
+    {
       id: 'improving-essay-structure',
       title: "Improving Essay Structure: A Guide for Middle and High School Students",
       excerpt: "Learn the fundamentals of crafting well-structured essays that engage readers and earn top grades.",
