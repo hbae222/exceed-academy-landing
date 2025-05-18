@@ -1,9 +1,17 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Hero: React.FC = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative bg-gradient-to-b from-exceed-light to-white">
       <div className="section-container pt-16 pb-24">
@@ -16,7 +24,10 @@ const Hero: React.FC = () => {
               Professional editing, personalized feedback, and effective coaching for students in grades 6-12.
             </p>
             <div className="pt-4 space-y-6">
-              <Button className="cta-button text-lg px-8 py-6 rounded-xl">
+              <Button 
+                className="cta-button text-lg px-8 py-6 rounded-xl"
+                onClick={scrollToPricing}
+              >
                 Start Your Writing Journey
               </Button>
               

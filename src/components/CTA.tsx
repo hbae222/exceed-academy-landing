@@ -3,6 +3,13 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 
 const CTA: React.FC = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative">
       <div className="absolute inset-0 z-0">
@@ -23,7 +30,10 @@ const CTA: React.FC = () => {
             <p className="text-xl mb-10 text-blue-100">
               Give your child the writing skills they need to succeed in school and beyond.
             </p>
-            <Button className="bg-white text-exceed-navy hover:bg-blue-100 text-lg py-7 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <Button 
+              className="bg-white text-exceed-navy hover:bg-blue-100 text-lg py-7 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all"
+              onClick={scrollToPricing}
+            >
               Start Their Writing Journey
             </Button>
             <p className="mt-8 text-blue-200">
