@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -59,28 +58,27 @@ export const usePricingState = () => {
             id: 1,
             name: "Basic",
             price: "$70",
-            period: "one-time payment",
-            description: "One-time professional edit for a single essay",
-            features: [
-              "Premium editing",
-              "Detailed feedback notes",
-              "One revision"
-            ],
-            highlight: false,
-            stripe_price_id: "price_basic_onetime"
-          },
-          {
-            id: 2,
-            name: "Standard",
-            price: "$70",
             period: "per month",
             description: "Monthly subscription for regular essay feedback",
             features: [
               "One essay per month",
               "Premium editing",
+              "Detailed feedback notes"
+            ],
+            highlight: false,
+            stripe_price_id: "price_basic_monthly"
+          },
+          {
+            id: 2,
+            name: "Standard",
+            price: "$120",
+            period: "per month",
+            description: "Monthly subscription for multiple essays",
+            features: [
+              "Two essays per month",
+              "Premium editing",
               "Detailed feedback notes",
-              "Two revisions per essay",
-              "24-hour turnaround"
+              "Increase writing speed"
             ],
             highlight: true,
             stripe_price_id: "price_standard_monthly"
@@ -88,16 +86,14 @@ export const usePricingState = () => {
           {
             id: 3,
             name: "Premium",
-            price: "$120",
+            price: "$400",
             period: "per month",
             description: "Comprehensive coverage for multiple essays",
             features: [
-              "Two essays per month",
+              "Four essays per month",
               "Premium editing",
-              "In-depth content analysis",
-              "Unlimited revisions",
-              "Priority 12-hour turnaround",
-              "Direct access to editor"
+              "Detailed feedback notes",
+              "A+ writer"
             ],
             highlight: false,
             stripe_price_id: "price_premium_monthly"
