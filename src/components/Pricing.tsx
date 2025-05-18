@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Check, Lock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Json } from "@/integrations/supabase/types";
 
 interface Plan {
   id: number;
@@ -61,14 +62,17 @@ const Pricing: React.FC = () => {
         
         if (error) throw error;
         
-        // Transform database plans to component format
+        // Transform database plans to component format with proper type handling
         const formattedPlans = data.map(plan => ({
           id: plan.id,
           name: plan.name,
           price: `$${plan.price}`,
           period: "per month",
           description: plan.description,
-          features: Array.isArray(plan.features) ? plan.features : [],
+          // Convert JSON features to strings, ensuring they're all strings
+          features: Array.isArray(plan.features) 
+            ? plan.features.map(feature => String(feature))
+            : [],
           highlight: plan.name === "Standard", // Highlight the middle plan
           stripe_price_id: plan.stripe_price_id
         }));
