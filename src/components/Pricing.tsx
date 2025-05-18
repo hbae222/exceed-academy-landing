@@ -70,38 +70,69 @@ const Pricing: React.FC = () => {
   useEffect(() => {
     const fetchPlans = async () => {
       try {
-        const { data, error } = await supabase
-          .from('plans')
-          .select('*')
-          .eq('active', true)
-          .order('price', { ascending: true });
+        // For this demo, we'll hardcode the plans rather than fetching from the database
+        // This would normally come from the Supabase database
         
-        if (error) throw error;
+        const hardcodedPlans = [
+          {
+            id: 1,
+            name: "Basic",
+            price: "$40",
+            period: "one-time payment",
+            description: "One-time professional edit for a single essay",
+            features: [
+              "Premium editing",
+              "Grammar and style correction",
+              "Structure suggestions",
+              "One revision"
+            ],
+            highlight: false,
+            stripe_price_id: "price_basic_onetime"
+          },
+          {
+            id: 2,
+            name: "Standard",
+            price: "$70",
+            period: "per month",
+            description: "Monthly subscription for regular essay feedback",
+            features: [
+              "One essay per month",
+              "Premium editing",
+              "Detailed feedback notes",
+              "Two revisions per essay",
+              "24-hour turnaround"
+            ],
+            highlight: true,
+            stripe_price_id: "price_standard_monthly"
+          },
+          {
+            id: 3,
+            name: "Premium",
+            price: "$120",
+            period: "per month",
+            description: "Comprehensive coverage for multiple essays",
+            features: [
+              "Two essays per month",
+              "Premium editing",
+              "In-depth content analysis",
+              "Unlimited revisions",
+              "Priority 12-hour turnaround",
+              "Direct access to editor"
+            ],
+            highlight: false,
+            stripe_price_id: "price_premium_monthly"
+          }
+        ];
         
-        // Transform database plans to component format with proper type handling
-        const formattedPlans = data.map(plan => ({
-          id: plan.id,
-          name: plan.name,
-          price: `$${plan.price}`,
-          period: "per month",
-          description: plan.description,
-          // Convert JSON features to strings, ensuring they're all strings
-          features: Array.isArray(plan.features) 
-            ? (plan.features as Json[]).map(feature => String(feature))
-            : [],
-          highlight: plan.name === "Standard", // Highlight the middle plan
-          stripe_price_id: plan.stripe_price_id
-        }));
-        
-        setPlans(formattedPlans);
+        setPlans(hardcodedPlans);
+        setLoading(false);
       } catch (error) {
-        console.error("Error fetching plans:", error);
+        console.error("Error setting up pricing plans:", error);
         toast({
           title: "Error",
           description: "Could not load pricing plans. Please try again later.",
           variant: "destructive"
         });
-      } finally {
         setLoading(false);
       }
     };
