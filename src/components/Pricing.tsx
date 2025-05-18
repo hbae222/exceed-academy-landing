@@ -17,8 +17,12 @@ interface Plan {
   stripe_price_id: string;
 }
 
+interface DisplayPlan extends Omit<Plan, 'price'> {
+  price: string; // Display price is a string for UI purposes
+}
+
 const Pricing: React.FC = () => {
-  const [plans, setPlans] = useState<Plan[]>([]);
+  const [plans, setPlans] = useState<DisplayPlan[]>([]);
   const [loading, setLoading] = useState(true);
   const [processingPlan, setProcessingPlan] = useState<string | null>(null);
   const [userSubscription, setUserSubscription] = useState<any>(null);
@@ -107,7 +111,7 @@ const Pricing: React.FC = () => {
     checkSubscription();
   }, [isAuthenticated, toast]);
 
-  const handlePlanSelect = async (plan: Plan) => {
+  const handlePlanSelect = async (plan: DisplayPlan) => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication Required",
