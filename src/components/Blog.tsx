@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight, Calendar, User } from "lucide-react";
 
 const Blog: React.FC = () => {
   const blogPosts = [
@@ -34,7 +34,7 @@ const Blog: React.FC = () => {
   ];
 
   return (
-    <section id="blog" className="py-16">
+    <section id="blog" className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-exceed-navy mb-4">
@@ -47,8 +47,8 @@ const Blog: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
+            <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="h-52 overflow-hidden">
                 <img 
                   src={post.imageUrl} 
                   alt={post.title} 
@@ -56,20 +56,25 @@ const Blog: React.FC = () => {
                 />
               </div>
               <CardHeader className="pb-2">
-                <h3 className="font-bold text-xl text-exceed-navy">{post.title}</h3>
+                <h3 className="font-bold text-xl text-exceed-navy line-clamp-2">{post.title}</h3>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-gray-600 mb-3">{post.excerpt}</p>
-                <div className="text-sm text-gray-500 mt-2">
-                  <span>{post.date}</span>
-                  <span className="mx-2">•</span>
-                  <span>{post.author}</span>
+                <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                <div className="flex items-center text-sm text-gray-500 mt-3 space-x-4">
+                  <div className="flex items-center">
+                    <Calendar className="h-3 w-3 mr-1 text-exceed-blue" />
+                    <span>{post.date}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-3 w-3 mr-1 text-exceed-blue" />
+                    <span>{post.author}</span>
+                  </div>
                 </div>
               </CardContent>
               <CardFooter className="pt-0">
-                <Button variant="link" className="text-exceed-blue p-0" asChild>
-                  <Link to={`/blog/${post.id}`} className="flex items-center">
-                    Read More <ExternalLink className="ml-1 h-4 w-4" />
+                <Button variant="link" className="text-exceed-blue p-0 hover:text-exceed-indigo" asChild>
+                  <Link to={`/blog/${post.id}`} className="flex items-center font-medium">
+                    Read More <ArrowUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
