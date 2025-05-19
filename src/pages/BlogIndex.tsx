@@ -32,14 +32,6 @@ const BlogIndex: React.FC = () => {
       date: "April 25, 2025",
       author: "Michael Rivera",
       imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80"
-    },
-    {
-      id: 'college-essay-tips',
-      title: "College Essays That Stand Out: Tips from Admissions Officers",
-      excerpt: "Insider advice on crafting college application essays that capture attention and show your unique perspective.",
-      date: "April 12, 2025",
-      author: "Sarah Johnson",
-      imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     }
   ];
 
