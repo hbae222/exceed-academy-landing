@@ -3,6 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,20 +24,76 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-white transition-colors">Academic Writing</Link></li>
-              <li><Link to="/" className="hover:text-white transition-colors">Creative Writing</Link></li>
-              <li><Link to="/" className="hover:text-white transition-colors">College Prep</Link></li>
-              <li><Link to="/" className="hover:text-white transition-colors">Writing Feedback</Link></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('pricing')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Academic Writing
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('pricing')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Creative Writing
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('pricing')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  College Prep
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('pricing')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Writing Feedback
+                </button>
+              </li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold text-white mb-4">About</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-white transition-colors">Our Teachers</Link></li>
-              <li><Link to="/" className="hover:text-white transition-colors">Testimonials</Link></li>
-              <li><Link to="/" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link to="/" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('our-teachers')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Our Teachers
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('testimonials')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Testimonials
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('faq')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  FAQ
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Contact Us
+                </button>
+              </li>
             </ul>
           </div>
           

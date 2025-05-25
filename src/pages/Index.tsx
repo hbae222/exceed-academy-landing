@@ -30,7 +30,7 @@ const Index = () => {
       <div className="section-wrapper bg-white">
         <PricingCalculator />
       </div>
-      <div className="section-wrapper bg-exceed-light">
+      <div id="our-teachers" className="section-wrapper bg-exceed-light">
         <OurTeachers />
       </div>
       <div className="section-wrapper bg-white">
@@ -42,19 +42,19 @@ const Index = () => {
       <div id="pricing" className="section-wrapper bg-white">
         <Pricing />
       </div>
-      <div className="section-wrapper bg-[#E8F4FF]">
+      <div id="testimonials" className="section-wrapper bg-[#E8F4FF]">
         <Testimonials />
       </div>
       <div className="section-wrapper bg-white">
         <Blog />
       </div>
-      <div className="section-wrapper bg-[#E8F4FF]">
+      <div id="faq" className="section-wrapper bg-[#E8F4FF]">
         <FAQ />
       </div>
       <div className="section-wrapper">
         <CTA />
       </div>
-      <div className="section-wrapper bg-exceed-light">
+      <div id="contact" className="section-wrapper bg-exceed-light">
         <ContactUs />
       </div>
       <Footer />
