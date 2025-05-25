@@ -38,47 +38,51 @@ const BlogIndex: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="py-12">
-        <div className="section-container bg-white/90 rounded-2xl shadow-lg">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-exceed-navy mb-4">
-              Writing Resources & Insights
-            </h1>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Explore our collection of articles on writing techniques, essay structure, academic success, and more.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={post.imageUrl} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <h3 className="font-bold text-xl text-exceed-navy">{post.title}</h3>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-gray-600 mb-3">{post.excerpt}</p>
-                  <div className="text-sm text-gray-500 mt-2">
-                    <span>{post.date}</span>
-                    <span className="mx-2">•</span>
-                    <span>{post.author}</span>
-                  </div>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button variant="link" className="text-exceed-blue p-0" asChild>
-                    <Link to={`/blog/${post.id}`} className="flex items-center">
-                      Read More <ExternalLink className="ml-1 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="py-12">
+          <div className="section-container">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 md:p-12">
+              <div className="text-center mb-16">
+                <h1 className="text-4xl md:text-5xl font-bold text-exceed-navy mb-4">
+                  Writing Resources & Insights
+                </h1>
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                  Explore our collection of articles on writing techniques, essay structure, academic success, and more.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {blogPosts.map((post) => (
+                  <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={post.imageUrl} 
+                        alt={post.title} 
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <CardHeader className="pb-2">
+                      <h3 className="font-bold text-xl text-exceed-navy">{post.title}</h3>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-gray-600 mb-3">{post.excerpt}</p>
+                      <div className="text-sm text-gray-500 mt-2">
+                        <span>{post.date}</span>
+                        <span className="mx-2">•</span>
+                        <span>{post.author}</span>
+                      </div>
+                    </CardContent>
+                    <CardFooter className="pt-0">
+                      <Button variant="link" className="text-exceed-blue p-0" asChild>
+                        <Link to={`/blog/${post.id}`} className="flex items-center">
+                          Read More <ExternalLink className="ml-1 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

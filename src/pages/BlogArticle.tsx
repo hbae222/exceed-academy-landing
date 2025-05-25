@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -369,12 +370,14 @@ const BlogArticle: React.FC = () => {
     return (
       <>
         <Navbar />
-        <div className="section-container min-h-[60vh] flex items-center justify-center flex-col">
-          <h1 className="text-3xl font-bold text-exceed-navy mb-4">Article Not Found</h1>
-          <p className="text-gray-700 mb-8">The article you're looking for doesn't exist or has been removed.</p>
-          <Button asChild>
-            <Link to="/blog">Back to Blog</Link>
-          </Button>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+          <div className="section-container min-h-[60vh] flex items-center justify-center flex-col">
+            <h1 className="text-3xl font-bold text-exceed-navy mb-4">Article Not Found</h1>
+            <p className="text-gray-700 mb-8">The article you're looking for doesn't exist or has been removed.</p>
+            <Button asChild>
+              <Link to="/blog">Back to Blog</Link>
+            </Button>
+          </div>
         </div>
         <Footer />
       </>
@@ -384,43 +387,47 @@ const BlogArticle: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-12 pb-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="section-container max-w-4xl mx-auto">
-          <div className="mb-8">
-            <Link to="/blog" className="flex items-center text-exceed-blue hover:text-exceed-indigo mb-6 transition-colors">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to all articles
-            </Link>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-exceed-navy mb-6 leading-tight">{article.title}</h1>
-            
-            <div className="flex items-center text-gray-600 mb-8 gap-4">
-              <div className="flex items-center">
-                <Calendar className="h-4 w-4 mr-2 text-exceed-blue" />
-                <span>{article.date}</span>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="pt-12 pb-24">
+          <div className="section-container max-w-4xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 md:p-12">
+              <div className="mb-8">
+                <Link to="/blog" className="flex items-center text-exceed-blue hover:text-exceed-indigo mb-6 transition-colors">
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Back to all articles
+                </Link>
+                
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-exceed-navy mb-6 leading-tight">{article.title}</h1>
+                
+                <div className="flex items-center text-gray-600 mb-8 gap-4">
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2 text-exceed-blue" />
+                    <span>{article.date}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2 text-exceed-blue" />
+                    <span>By {article.author}</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center">
-                <User className="h-4 w-4 mr-2 text-exceed-blue" />
-                <span>By {article.author}</span>
+              
+              <div className="mb-10">
+                <img 
+                  src={article.imageUrl} 
+                  alt={article.title} 
+                  className="w-full h-[400px] object-cover rounded-xl shadow-lg" 
+                />
+              </div>
+              
+              <article className="prose max-w-none" dangerouslySetInnerHTML={{ __html: article.content }} />
+              
+              <div className="border-t border-gray-200 mt-16 pt-10">
+                <h3 className="text-exceed-navy text-2xl font-semibold mb-6">Ready to improve your writing skills?</h3>
+                <Button className="cta-button px-8 py-6 text-lg" asChild>
+                  <Link to="/#pricing">Start Your Writing Journey</Link>
+                </Button>
               </div>
             </div>
-          </div>
-          
-          <div className="mb-10">
-            <img 
-              src={article.imageUrl} 
-              alt={article.title} 
-              className="w-full h-[400px] object-cover rounded-xl shadow-lg" 
-            />
-          </div>
-          
-          <article className="prose max-w-none" dangerouslySetInnerHTML={{ __html: article.content }} />
-          
-          <div className="border-t border-gray-200 mt-16 pt-10">
-            <h3 className="text-exceed-navy text-2xl font-semibold mb-6">Ready to improve your writing skills?</h3>
-            <Button className="cta-button px-8 py-6 text-lg" asChild>
-              <Link to="/#pricing">Start Your Writing Journey</Link>
-            </Button>
           </div>
         </div>
       </div>
