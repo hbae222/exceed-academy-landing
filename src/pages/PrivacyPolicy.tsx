@@ -2,6 +2,9 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy: React.FC = () => {
   return (
@@ -9,7 +12,15 @@ const PrivacyPolicy: React.FC = () => {
       <Navbar />
       
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-3xl md:text-4xl font-bold text-exceed-navy mb-8">Privacy Policy</h1>
+        <div className="mb-8">
+          <Button variant="ghost" className="mb-4" asChild>
+            <Link to="/" className="flex items-center">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Home
+            </Link>
+          </Button>
+          <h1 className="text-3xl md:text-4xl font-bold text-exceed-navy">Privacy Policy</h1>
+        </div>
         
         <div className="prose prose-lg max-w-none">
           <p>Last Updated: April 7, 2025</p>
