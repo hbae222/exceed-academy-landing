@@ -27,7 +27,7 @@ const OurTeachers: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-              {["Harvard", "Stanford", "UC Berkeley", "NYU", "Harvard", "Yale"].map((school, index) => (
+              {["Harvard", "Stanford", "UC Berkeley", "NYU", "Columbia", "Yale"].map((school, index) => (
                 <Card key={`${school}-${index}`} className="p-4 text-center bg-exceed-light/50 border border-exceed-blue/10 rounded-lg shadow-sm hover:shadow-md transition-all">
                   <p className="font-medium text-exceed-navy">{school}</p>
                 </Card>
@@ -39,7 +39,7 @@ const OurTeachers: React.FC = () => {
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Stanford_Cardinal_logo.svg/1424px-Stanford_Cardinal_logo.svg.png" alt="Stanford" className="h-12 object-contain" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley" className="h-12 object-contain" />
               <img src="/lovable-uploads/4bf03c40-5617-4c73-a064-95eb62dfc3c4.png" alt="NYU" className="h-12 object-contain" />
-              <img src="/lovable-uploads/74c97f13-dfd8-4fb2-b02d-d5b6278993b0.png" alt="Harvard" className="h-12 object-contain" />
+              <img src="/lovable-uploads/d57b5876-921a-4bf2-815f-bec85f28c683.png" alt="Columbia" className="h-12 object-contain" />
               <img src="/lovable-uploads/29240d9b-000c-4d7c-b95a-9f6ba8111af9.png" alt="Yale" className="h-12 object-contain" />
             </div>
           </div>
