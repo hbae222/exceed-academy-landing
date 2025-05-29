@@ -74,6 +74,17 @@
   }
 }
 
+@keyframes fade-in-delayed {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer components {
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
@@ -93,6 +104,12 @@
   
   .cta-button {
     @apply bg-exceed-blue hover:bg-exceed-indigo text-white font-medium py-3 px-6 rounded-md transition-colors duration-300 shadow-md hover:shadow-lg;
+  }
+
+  /* Page Load Animations */
+  .animate-fade-in {
+    animation: fade-in-delayed 0.8s ease-out forwards;
+    opacity: 0;
   }
 
   /* Blog Article Styling */
