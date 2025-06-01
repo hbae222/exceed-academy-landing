@@ -34,8 +34,11 @@ const ContactUs: React.FC = () => {
           <div className="bg-white rounded-xl shadow-lg p-8 max-w-md w-full">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Mail className="h-6 w-6 text-exceed-blue" />
-              <a href="mailto:help@collegeessayexcel.com" className="text-exceed-blue hover:text-exceed-indigo transition-colors">
-                help@collegeessayexcel.com
+              <a 
+                href="mailto:help@exceedacademy.org" 
+                className="text-exceed-blue hover:text-exceed-indigo transition-colors"
+              >
+                help@exceedacademy.org
               </a>
             </div>
             

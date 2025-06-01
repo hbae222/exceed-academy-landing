@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Accordion,
@@ -34,6 +35,13 @@ const FAQ: React.FC = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="faq" className="py-16">
       <div className="section-container">
@@ -63,7 +71,7 @@ const FAQ: React.FC = () => {
         
         <div className="mt-12 text-center">
           <p className="text-gray-700">
-            Have more questions? <a href="#" className="text-exceed-blue hover:underline">Contact us</a>
+            Have more questions? <button onClick={scrollToContact} className="text-exceed-blue hover:underline cursor-pointer">Contact us</button>
           </p>
         </div>
       </div>
